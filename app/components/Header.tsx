@@ -16,6 +16,10 @@ const Header = () => {
             className={styles.logo}
             priority
           />
+          <div className={styles.logoText}>
+            <p className={styles.firstName}>Mathieu</p>
+            <p className={styles.lastName}>Gaucher</p>
+          </div>
         </div>
         
         <ul className={styles.navList}>
