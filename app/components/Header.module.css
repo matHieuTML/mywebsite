@@ -1,0 +1,49 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 20px;
+
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.navList {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  cursor: pointer;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.7;
+  transition: color 0.3s ease;
+}
+
+.navItem:hover {
+  opacity: 1;
+}
