@@ -164,11 +164,20 @@ export default function Home() {
                         strokeWidth="3"
                         strokeLinecap="round"
                         initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 0.98 }}
+                        whileInView={{ pathLength: 0.98 }}
+                        viewport={{ once: false }}
                         transition={{ duration: 2, ease: "easeInOut" }}
                       />
                     </svg>
-                    <span className={styles.circleValue}>98</span>
+                    <motion.span 
+                      className={styles.circleValue}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: false }}
+                      transition={{ duration: 0.5, delay: 1.5 }}
+                    >
+                      98
+                    </motion.span>
                   </div>
                   <span className={styles.circleLabel}>Performance</span>
                 </div>
@@ -193,11 +202,20 @@ export default function Home() {
                         strokeWidth="3"
                         strokeLinecap="round"
                         initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
-                        transition={{ duration: 2, ease: "easeInOut" }}
+                        whileInView={{ pathLength: 1 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }}
                       />
                     </svg>
-                    <span className={styles.circleValue}>100</span>
+                    <motion.span 
+                      className={styles.circleValue}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: false }}
+                      transition={{ duration: 0.5, delay: 1.7 }}
+                    >
+                      100
+                    </motion.span>
                   </div>
                   <span className={styles.circleLabel}>SEO</span>
                 </div>
@@ -222,11 +240,20 @@ export default function Home() {
                         strokeWidth="3"
                         strokeLinecap="round"
                         initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 0.97 }}
-                        transition={{ duration: 2, ease: "easeInOut" }}
+                        whileInView={{ pathLength: 0.97 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 2, ease: "easeInOut", delay: 0.4 }}
                       />
                     </svg>
-                    <span className={styles.circleValue}>97</span>
+                    <motion.span 
+                      className={styles.circleValue}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: false }}
+                      transition={{ duration: 0.5, delay: 1.9 }}
+                    >
+                      97
+                    </motion.span>
                   </div>
                   <span className={styles.circleLabel}>Accessibilité</span>
                 </div>
