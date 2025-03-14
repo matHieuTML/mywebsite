@@ -168,6 +168,13 @@ export default function Home() {
             <h3>Maintenance & gestion de votre site</h3>
             <p>Je vous propose un service de maintenance et de gestion de votre site web. Je m'occupe de tout !!
             </p>
+            <div className={styles.filesContainer}>
+              <div className={styles.filesContainerTitle}>
+                <h4>Titre</h4>
+                <p>Date</p>
+              </div>
+
+            </div>
           </article>
           <article className={styles.serviceItem + ' ' + styles.serviceItem5}>
             <h3>Suivi client et devis gratuit</h3>

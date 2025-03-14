@@ -319,6 +319,7 @@ max-height: 400px;
   background-position: center;
   max-width: 513px;
   max-height: 400px;
+  position: relative;
 
 
 }
@@ -330,4 +331,48 @@ max-height: 400px;
   height: 350px;
   max-width: 900px;
 
+}
+
+
+
+
+
+
+
+.filesContainer {
+  background: rgba( 74, 74, 74, 0.3 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 20px;
+
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 80%;
+  height: 200px;
+  margin: auto;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+}
+
+.filesContainerTitle {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 12px;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
+  
+}
+
+.filesContainerTitle h4, .filesContainerTitle p {
+  opacity: 0.6;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.filesContainerTitle h4 {
+  margin-right: 200px;
 }
