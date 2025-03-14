@@ -99,7 +99,7 @@ export default function Home() {
                         transition={{ duration: 2, ease: "easeInOut" }}
                       />
                     </svg>
-                    <span className={styles.circleValue}>98%</span>
+                    <span className={styles.circleValue}>98</span>
                   </div>
                   <span className={styles.circleLabel}>Performance</span>
                 </div>
@@ -128,7 +128,7 @@ export default function Home() {
                         transition={{ duration: 2, ease: "easeInOut" }}
                       />
                     </svg>
-                    <span className={styles.circleValue}>100%</span>
+                    <span className={styles.circleValue}>100</span>
                   </div>
                   <span className={styles.circleLabel}>SEO</span>
                 </div>
@@ -157,19 +157,19 @@ export default function Home() {
                         transition={{ duration: 2, ease: "easeInOut" }}
                       />
                     </svg>
-                    <span className={styles.circleValue}>97%</span>
+                    <span className={styles.circleValue}>97</span>
                   </div>
                   <span className={styles.circleLabel}>Accessibilité</span>
                 </div>
               </section>
             </article>
           </article>
-          <article className={styles.serviceItem}>
+          <article className={styles.serviceItem + ' ' + styles.serviceItem4}>
             <h3>Maintenance & gestion de votre site</h3>
             <p>Je vous propose un service de maintenance et de gestion de votre site web. Je m'occupe de tout !!
             </p>
           </article>
-          <article className={styles.serviceItem}>
+          <article className={styles.serviceItem + ' ' + styles.serviceItem5}>
             <h3>Suivi client et devis gratuit</h3>
             <p>Je vous accompagne tout au long du processus de création de votre site web. Je vous conseille et vous guide dans vos choix. Et je reste à votre écoute pour toutes questions.
             </p>

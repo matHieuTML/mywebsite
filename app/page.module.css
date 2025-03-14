@@ -286,7 +286,6 @@ max-height: 400px;
   font-size: 1.5rem;
   font-weight: 700;
   color: rgb(0, 255, 157);
-  text-shadow: 0 0 15px rgba(0, 255, 157, 0.6);
   transition: all 0.3s ease;
   letter-spacing: -0.5px;
 }
@@ -312,4 +311,23 @@ max-height: 400px;
   opacity: 0.7;
   font-weight: 700;
   font-size: 14px;
+}
+
+.serviceItem4 {
+  background-image: url("/images/service4.png");
+  background-size: cover;
+  background-position: center;
+  max-width: 513px;
+  max-height: 400px;
+
+
+}
+
+.serviceItem5 {
+  background-image: url("/images/service5.png");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  max-width: 900px;
+
 }
