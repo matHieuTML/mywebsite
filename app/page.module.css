@@ -359,7 +359,7 @@ max-height: 400px;
 
 .filesContainerTitle {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   padding: 12px;
   flex-wrap: nowrap;
@@ -373,8 +373,8 @@ max-height: 400px;
   font-size: 14px;
 }
 
-.filesContainerTitle h4 {
-  margin-right: 200px;
+.filesContainerTitle p {
+  margin-right: 60px;
 }
 
 .filesContainerList {
@@ -413,8 +413,17 @@ max-height: 400px;
 .fileItem span {
   font-size: 14px;
   opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .fileItem span:first-child {
   margin-right: 20px;
+}
+
+.fileItem svg {
+  color: #c9c8c8;
+  width: 14px;
+  height: 14px;
 }
