@@ -73,3 +73,157 @@
   color: var(--background);
   transition: background-color 0.3s ease;
 }
+
+
+
+
+.maquette{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-top: 20vh;
+}
+.maquetteTitle {
+  font-size: 40px;
+  font-weight: 900;
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: -3rem;
+}
+
+.snippetContainer {
+  width: 100%;
+  display: flex;
+  gap: 10rem;
+  justify-content: space-evenly;
+  margin-top: -600px;
+
+}
+
+
+.snippetTextContainer {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: end;
+  gap: 2rem;
+ height: 200px;
+ margin-top: -150px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9), rgba(0,0,0,1));
+
+}
+
+.snippetTextContainer article {
+  max-width: 300px;
+
+}
+
+
+
+.serviceContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30vh;
+}
+
+.serviceOnTitle {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #0099FF, #FFFFFF);
+  font-family: var(--font-montserrat);
+  font-weight: bold;
+  font-size: 32px;
+
+}
+
+.serviceTitle {
+  font-size: 40px;
+  font-weight: 900;
+  max-width: 800px;
+  text-align: center;
+}
+
+.serviceText {
+  font-size: 24px;
+  opacity: 0.7;
+  max-width: 700px;
+  text-align: center;
+}
+
+
+.serviceList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.serviceItem {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c9c8c8;
+  padding: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.serviceItem1 {
+ 
+  background-image: linear-gradient(to bottom left, transparent 50%, var(--primary));
+  position: relative;
+height: 400px;  
+  
+}
+
+.DesignImgContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  position: absolute;
+  align-items: end;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.DesignImgContainer img {
+  width: 241px;
+  margin-left: -50px;
+  margin-right: -50px;
+}
+.DesignImgContainer img:nth-child(1) {
+  height: 206px;
+}
+.DesignImgContainer img:nth-child(2) {
+  height: 256px;
+}
+.DesignImgContainer img:nth-child(3) {
+  height: 313px;
+}
+
+.serviceItem2 {
+  background-image: url("/images/service2bg.png");
+  background-size: cover;
+  background-position: center;
+position: relative;
+max-width: 513px;
+max-height: 400px;
+}
+
+
+.serviceItem2 img {
+  position: absolute;
+  bottom: 0;
+  right: 10;
+  object-fit: cover;
+}
+
+
+
+.serviceItem3 {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,255,157,1));

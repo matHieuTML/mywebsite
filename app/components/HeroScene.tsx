@@ -1,43 +1,83 @@
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { Suspense, useRef } from 'react'
-import { Group } from 'three'
+import { Suspense, useEffect, useState, useRef } from 'react'
+import { Object3D } from 'three'
 import styles from './HeroScene.module.css'
+
+function useMousePosition() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      // Normaliser la position entre -1 et 1
+      const x = (event.clientX / window.innerWidth) * 2 - 1
+      const y = (event.clientY / window.innerHeight) * 2 - 1
+      setMousePosition({ x, y })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
+  return mousePosition
+}
 
 function Smartphone() {
   const { scene } = useGLTF('/models/smartphone.glb')
-  const ref = useRef<Group>(null)
+  const mousePosition = useMousePosition()
+  const ref = useRef<Object3D>(null)
+
+  const tiltAmount = 0.15
+  const baseRotationX = -Math.PI/6
+  const baseRotationY = Math.PI/6
 
   useFrame((state) => {
     if (!ref.current) return
-    ref.current.rotation.y = state.clock.elapsedTime * 0.2
+    const floatOffset = -Math.sin(state.clock.elapsedTime * 1) * 0.08
+    ref.current.position.y = -0.2 + floatOffset
   })
 
   return (
     <primitive 
+      ref={ref}
       object={scene} 
       scale={0.4}
       position={[-4, -0.2, 1]}
-      rotation={[-Math.PI/6, Math.PI/6, 0]}
+      rotation={[
+        baseRotationX + mousePosition.y * tiltAmount,
+        baseRotationY + mousePosition.x * tiltAmount,
+        0
+      ]}
     />
   )
 }
 
 function Laptop() {
   const { scene } = useGLTF('/models/windows_10_laptop.glb')
-  const ref = useRef<Group>(null)
+  const mousePosition = useMousePosition()
+  const ref = useRef<Object3D>(null)
+
+  const tiltAmount = 0.15
+  const baseRotationX = Math.PI/6
+  const baseRotationY = Math.PI/2 - Math.PI/6
 
   useFrame((state) => {
     if (!ref.current) return
-    ref.current.rotation.y = Math.PI/2 + state.clock.elapsedTime * 0.1
+    const floatOffset = Math.sin(state.clock.elapsedTime * 1) * 0.08
+    ref.current.position.y = 0.5 + floatOffset
   })
 
   return (
     <primitive 
+      ref={ref}
       object={scene} 
       scale={12}
       position={[4, 0.5, 0]}
-      rotation={[Math.PI/6, Math.PI/2 - Math.PI/6, 0]}
+      rotation={[
+        baseRotationX + mousePosition.y * tiltAmount,
+        baseRotationY + mousePosition.x * tiltAmount,
+        0
+      ]}
     />
   )
 }
