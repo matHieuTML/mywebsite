@@ -1,10 +1,11 @@
 'use client'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
-import HeroScene from './components/HeroScene'
-import styles from './page.module.css'
-import Image from 'next/image'
+import { motion } from "framer-motion";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HeroScene from "./components/HeroScene";
+import styles from "./page.module.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -73,6 +74,94 @@ export default function Home() {
                 <p>Audit</p>
 
               </div>
+              <section className={styles.statContainerWithCircle}>
+                <div className={styles.circleContainer}>
+                  <div className={styles.circle}>
+                    <svg width="90" height="90" viewBox="0 0 90 90">
+                      <circle
+                        cx="45"
+                        cy="45"
+                        r="40"
+                        fill="none"
+                        stroke="rgba(255, 255, 255, 0.1)"
+                        strokeWidth="3"
+                      />
+                      <motion.circle
+                        cx="45"
+                        cy="45"
+                        r="40"
+                        fill="none"
+                        stroke="rgb(0, 255, 157)"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 0.98 }}
+                        transition={{ duration: 2, ease: "easeInOut" }}
+                      />
+                    </svg>
+                    <span className={styles.circleValue}>98%</span>
+                  </div>
+                  <span className={styles.circleLabel}>Performance</span>
+                </div>
+
+                <div className={styles.circleContainer}>
+                  <div className={styles.circle}>
+                    <svg width="90" height="90" viewBox="0 0 90 90">
+                      <circle
+                        cx="45"
+                        cy="45"
+                        r="40"
+                        fill="none"
+                        stroke="rgba(255, 255, 255, 0.1)"
+                        strokeWidth="3"
+                      />
+                      <motion.circle
+                        cx="45"
+                        cy="45"
+                        r="40"
+                        fill="none"
+                        stroke="rgb(0, 255, 157)"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
+                        transition={{ duration: 2, ease: "easeInOut" }}
+                      />
+                    </svg>
+                    <span className={styles.circleValue}>100%</span>
+                  </div>
+                  <span className={styles.circleLabel}>SEO</span>
+                </div>
+
+                <div className={styles.circleContainer}>
+                  <div className={styles.circle}>
+                    <svg width="90" height="90" viewBox="0 0 90 90">
+                      <circle
+                        cx="45"
+                        cy="45"
+                        r="40"
+                        fill="none"
+                        stroke="rgba(255, 255, 255, 0.1)"
+                        strokeWidth="3"
+                      />
+                      <motion.circle
+                        cx="45"
+                        cy="45"
+                        r="40"
+                        fill="none"
+                        stroke="rgb(0, 255, 157)"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 0.97 }}
+                        transition={{ duration: 2, ease: "easeInOut" }}
+                      />
+                    </svg>
+                    <span className={styles.circleValue}>97%</span>
+                  </div>
+                  <span className={styles.circleLabel}>Accessibilité</span>
+                </div>
+              </section>
             </article>
           </article>
           <article className={styles.serviceItem}>

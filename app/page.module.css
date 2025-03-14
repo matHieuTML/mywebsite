@@ -246,6 +246,51 @@ max-height: 400px;
     filter: brightness(0) invert(1);
 }
 
+.statContainerWithCircle {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.circleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  transform: rotate(-90deg);
+
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleLabel {
+  font-size: 0.875rem;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.circleValue {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(0, 255, 157);
+  text-shadow: 0 0 15px rgba(0, 255, 157, 0.6);
+  transition: all 0.3s ease;
+  letter-spacing: -0.5px;
+}
+
 .statContainer div {
   display: flex;
   justify-content: space-between;
