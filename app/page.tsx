@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from "framer-motion";
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HeroScene from "./components/HeroScene";
@@ -29,6 +30,51 @@ const maintenanceFiles = [
   { name: "Optimisation Core Web Vitals", date: "25/01/2025" },
   { name: "Rapport sécurité - Q1", date: "22/01/2025" },
 ];
+
+function ParallaxFiles() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
+
+  return (
+    <motion.div 
+      ref={containerRef}
+      className={styles.filesContainer}
+    >
+      <div className={styles.filesContainerTitle}>
+        <h4>Titre</h4>
+        <p>Date</p>
+      </div>
+      <motion.div 
+        className={styles.filesContainerList}
+        style={{ 
+          overflowY: "hidden",
+        }}
+      >
+        <motion.div
+          style={{ y }}
+        >
+          {maintenanceFiles.map((file, index) => (
+            <div key={index} className={styles.fileItem}>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                  <path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
+                  <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                </svg>
+                {file.name}
+              </span>
+              <span>{file.date}</span>
+            </div>
+          ))}
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  );
+}
 
 export default function Home() {
   return (
@@ -191,23 +237,7 @@ export default function Home() {
             <h3>Maintenance & gestion de votre site</h3>
             <p>Je vous propose un service de maintenance et de gestion de votre site web. Je m'occupe de tout !!
             </p>
-            <div className={styles.filesContainer}>
-              <div className={styles.filesContainerTitle}>
-                <h4>Titre</h4>
-                <p>Date</p>
-              </div>
-              <div className={styles.filesContainerList}>
-                {maintenanceFiles.map((file, index) => (
-                  <div key={index} className={styles.fileItem}>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-                    <path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
-                    <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
-</svg>{file.name}</span>
-                    <span>{file.date}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ParallaxFiles />
           </article>
           <article className={styles.serviceItem + ' ' + styles.serviceItem5}>
             <h3>Suivi client et devis gratuit</h3>
