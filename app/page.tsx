@@ -67,6 +67,13 @@ export default function Home() {
           <article className={styles.serviceItem + ' ' + styles.serviceItem3}>
             <h3>Référencement de votre site web</h3>
             <p>Avec mes bonnes pratiques, ma connaissance du SEO et votre contenu de qualité, votre site web sera bien référencé sur les moteurs de recherche.</p>
+            <article className={styles.statContainer}>
+              <div>
+                <span><Image src="/images/google.svg" alt="Google" width={10} height={10} className={styles.serviceImage} priority /><p>Google Lighthouse</p></span>
+                <p>Audit</p>
+
+              </div>
+            </article>
           </article>
           <article className={styles.serviceItem}>
             <h3>Maintenance & gestion de votre site</h3>
