@@ -376,3 +376,45 @@ max-height: 400px;
 .filesContainerTitle h4 {
   margin-right: 200px;
 }
+
+.filesContainerList {
+  height: calc(100% - 45px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.filesContainerList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filesContainerList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.filesContainerList::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.fileItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.fileItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.fileItem span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.fileItem span:first-child {
+  margin-right: 20px;
+}

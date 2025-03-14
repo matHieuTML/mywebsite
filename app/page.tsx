@@ -7,6 +7,29 @@ import HeroScene from "./components/HeroScene";
 import styles from "./page.module.css";
 import Image from "next/image";
 
+const maintenanceFiles = [
+  { name: "Mise à jour de sécurité - v2.1", date: "14/03/2025" },
+  { name: "Optimisation des performances", date: "12/03/2025" },
+  { name: "Sauvegarde système - Mars", date: "10/03/2025" },
+  { name: "Correctif SSL", date: "08/03/2025" },
+  { name: "Mise à jour plugins", date: "05/03/2025" },
+  { name: "Rapport analytics - Février", date: "28/02/2025" },
+  { name: "Maintenance BDD", date: "25/02/2025" },
+  { name: "Mise à jour WordPress 6.5", date: "22/02/2025" },
+  { name: "Optimisation images", date: "20/02/2025" },
+  { name: "Audit de sécurité", date: "18/02/2025" },
+  { name: "Mise à jour thème", date: "15/02/2025" },
+  { name: "Backup système - Février", date: "12/02/2025" },
+  { name: "Correctif PHP 8.2", date: "10/02/2025" },
+  { name: "Optimisation cache", date: "08/02/2025" },
+  { name: "Rapport performances", date: "05/02/2025" },
+  { name: "Mise à jour serveur", date: "02/02/2025" },
+  { name: "Maintenance plugins", date: "30/01/2025" },
+  { name: "Audit SEO - Janvier", date: "28/01/2025" },
+  { name: "Optimisation Core Web Vitals", date: "25/01/2025" },
+  { name: "Rapport sécurité - Q1", date: "22/01/2025" },
+];
+
 export default function Home() {
   return (
     <main>
@@ -173,7 +196,14 @@ export default function Home() {
                 <h4>Titre</h4>
                 <p>Date</p>
               </div>
-
+              <div className={styles.filesContainerList}>
+                {maintenanceFiles.map((file, index) => (
+                  <div key={index} className={styles.fileItem}>
+                    <span>{file.name}</span>
+                    <span>{file.date}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </article>
           <article className={styles.serviceItem + ' ' + styles.serviceItem5}>
