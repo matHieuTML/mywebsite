@@ -17,7 +17,7 @@ const AccordionItem = ({ title, content, isOpen, onClick }: AccordionItemProps) 
       <button
         className={styles.header}
         onClick={onClick}
-        aria-expanded={isOpen ? 'true' : 'false'}
+        aria-expanded={isOpen ? "true" : "false"}
       >
         {title}
         <motion.div
