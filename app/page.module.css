@@ -193,8 +193,6 @@ height: 400px;
 
 .DesignImgContainer img {
   width: 241px;
-  margin-left: -50px;
-  margin-right: -50px;
 }
 .DesignImgContainer img:nth-child(1) {
   height: 206px;
@@ -219,7 +217,7 @@ overflow: hidden;
 
 .serviceImageWrapper {
   position: absolute;
-  right: 10px;
+  bottom: -18px;
   width: 467px;
   height: 235px;
 }

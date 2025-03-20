@@ -125,9 +125,27 @@ export default function Home() {
             <h3>Design</h3>
             <p>À l’aide de Figma, Framer et bien d’autre outils  donnons vie à votre vision </p>
             <section className={styles.DesignImgContainer}>
-              <Image src="/images/figma3.png" alt="Design" width={350} height={600} className={styles.serviceImage} priority />
-              <Image src="/images/figma2.png" alt="Design" width={350} height={600} className={styles.serviceImage} priority />
-              <Image src="/images/figma1.png" alt="Design" width={350} height={600} className={styles.serviceImage} priority />
+              <motion.div
+                initial={{ marginLeft: -100, marginRight: -100 }}
+                whileInView={{ marginLeft: -50, marginRight: -50 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+              >
+                <Image src="/images/figma3.png" alt="Design" width={350} height={600} className={styles.serviceImage} priority />
+              </motion.div>
+              <motion.div
+                initial={{ marginLeft: -100, marginRight: -100 }}
+                whileInView={{ marginLeft: -50, marginRight: -50 }}
+                transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+              >
+                <Image src="/images/figma2.png" alt="Design" width={350} height={600} className={styles.serviceImage} priority />
+              </motion.div>
+              <motion.div
+                initial={{ marginLeft: -100, marginRight: -100 }}
+                whileInView={{ marginLeft: -50, marginRight: -50 }}
+                transition={{ duration: 1.5, ease: "easeOut", delay: 0.4 }}
+              >
+                <Image src="/images/figma1.png" alt="Design" width={350} height={600} className={styles.serviceImage} priority />
+              </motion.div>
             </section>
           </article>
           <article className={styles.serviceItem + ' ' + styles.serviceItem2}>
