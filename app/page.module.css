@@ -189,19 +189,24 @@ height: 400px;
   left: 0;
   right: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .DesignImgContainer img {
   width: 241px;
 }
-.DesignImgContainer img:nth-child(1) {
-  height: 206px;
+.DesignImgContainer div {
+  margin-bottom:-10px;
+  padding:0;
 }
-.DesignImgContainer img:nth-child(2) {
-  height: 256px;
+.DesignImgContainer div:first-child img {
+  height: 206px !important;
 }
-.DesignImgContainer img:nth-child(3) {
-  height: 313px;
+.DesignImgContainer div:nth-child(2) img {
+  height: 256px !important;
+}
+.DesignImgContainer div:nth-child(3) img {
+  height: 313px !important;
 }
 
 .serviceItem2 {
