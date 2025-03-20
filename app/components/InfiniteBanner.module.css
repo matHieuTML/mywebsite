@@ -1,0 +1,17 @@
+.bannerWrapper {
+  position: relative;
+  width: max-content;
+  overflow: hidden;
+}
+
+.bannerContent {
+  width: max-content;
+}
+
+.duplicateContent {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 100%;
+  top: 0;
+}

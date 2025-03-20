@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HeroScene from "./components/HeroScene";
+import ProjectsBanner from "./components/ProjectsBanner";
 import styles from "./page.module.css";
 import Image from "next/image";
 
@@ -274,6 +275,8 @@ export default function Home() {
 
         </section>
       </section>
+
+      <ProjectsBanner />
       <Footer />
     </main>
   )
