@@ -2,8 +2,6 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import HeroScene from "./components/HeroScene";
 import ProjectsBanner from "./components/ProjectsBanner";
 import styles from "./page.module.css";
@@ -80,7 +78,6 @@ function ParallaxFiles() {
 export default function Home() {
   return (
     <main>
-      <Header />
       <div className={styles.hero}>
         <HeroScene />
         <div className={styles.content}>
@@ -320,7 +317,6 @@ export default function Home() {
       </section>
 
       <ProjectsBanner />
-      <Footer />
     </main>
   )
 }

@@ -1,17 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Space_Grotesk, Montserrat } from 'next/font/google'
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -39,12 +30,11 @@ export default function RootLayout({
     <html lang="fr" className={`${spaceGrotesk.variable} ${montserrat.variable}`}>
       <body>
         <div className="layout-container">
+          <Header />
           <main className="main-content">
             {children}
           </main>
-          <footer className="footer">
-            {/* Contenu du footer */}
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>
