@@ -133,7 +133,21 @@ export default function Home() {
           <article className={styles.serviceItem + ' ' + styles.serviceItem2}>
             <h3>Intégration & fonctionnalités</h3>
             <p>C'est maintenant que le fun commence ! Et oui je vais donner vie à votre projet. avec tout mon coeur et mon savoir faire. </p>
-            <Image src="/images/vs.png" alt="Intégration & fonctionnalités" width={467} height={235} className={styles.serviceImage} priority />
+            <motion.div
+              initial={{ bottom: -100 }}
+              whileInView={{ bottom: -18 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className={styles.serviceImageWrapper}
+            >
+              <Image 
+                src="/images/charte-maquette.webp" 
+                alt="Intégration & fonctionnalités" 
+                width={467} 
+                height={235} 
+                className={styles.serviceImage} 
+                priority 
+              />
+            </motion.div>
           </article>
           <article className={styles.serviceItem + ' ' + styles.serviceItem3}>
             <h3>Référencement de votre site web</h3>
