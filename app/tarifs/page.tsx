@@ -7,14 +7,14 @@ const PricingCard = ({
   title, 
   price, 
   features, 
-  isPopular = false 
+  variant = 'starter'
 }: { 
   title: string
   price: string
   features: string[]
-  isPopular?: boolean
+  variant?: 'starter' | 'popular' | 'ecommerce' | 'custom'
 }) => (
-  <div className={`${styles.pricingCard} ${isPopular ? styles.popular : ''}`}>
+  <div className={`${styles.pricingCard} ${styles[variant]}`}>
     <div className={styles.cardHeader}>
       <h3 className={styles.cardTitle}>{title}</h3>
       <div className={styles.price}>
@@ -41,7 +41,7 @@ const PricingCard = ({
         </li>
       ))}
     </ul>
-    <button className={`${styles.ctaButton} ${isPopular ? styles.popularButton : ''}`}>
+    <button className={`${styles.ctaButton} ${styles[`${variant}Button`]}`}>
       Commencer un projet
     </button>
   </div>
@@ -60,7 +60,8 @@ export default function Tarifs() {
         "Formulaire de contact",
         "Hébergement 1 an offert",
         "Formation utilisation basique"
-      ]
+      ],
+      variant: 'starter' as const
     },
     {
       title: "Site Premium",
@@ -74,7 +75,7 @@ export default function Tarifs() {
         "Maintenance 6 mois",
         "Analytics et rapports mensuels"
       ],
-      isPopular: true
+      variant: 'popular' as const
     },
     {
       title: "Site E-commerce",
@@ -87,7 +88,22 @@ export default function Tarifs() {
         "Panel administrateur",
         "Formation complète",
         "Support prioritaire 1 an"
-      ]
+      ],
+      variant: 'ecommerce' as const
+    },
+    {
+      title: "Sur Mesure",
+      price: "Sur devis",
+      features: [
+        "Projet complexe ou spécifique",
+        "Maintenance et mises à jour",
+        "Fonctionnalités personnalisées",
+        "Intégrations sur mesure",
+        "Architecture spécifique",
+        "Support dédié",
+        "Accompagnement privilégié"
+      ],
+      variant: 'custom' as const
     }
   ]
 
@@ -117,7 +133,7 @@ export default function Tarifs() {
             title={plan.title}
             price={plan.price}
             features={plan.features}
-            isPopular={plan.isPopular}
+            variant={plan.variant}
           />
         ))}
       </div>
