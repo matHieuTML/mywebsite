@@ -110,7 +110,7 @@ export default function Home() {
             y: useTransform(
               useScroll().scrollY,
               [0, 2000],
-              [600, -150],
+              [400, -150],
               { clamp: true }
             )
           }}
