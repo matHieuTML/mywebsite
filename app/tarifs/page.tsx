@@ -2,17 +2,20 @@
 
 import { motion } from 'framer-motion'
 import styles from './page.module.css'
+import Accordion from '../components/Accordion'
 
 const PricingCard = ({ 
   title, 
   price, 
   features, 
-  variant = 'starter'
+  variant = 'starter',
+  serviceType
 }: { 
   title: string
   price: string
   features: string[]
   variant?: 'starter' | 'popular' | 'ecommerce' | 'custom'
+  serviceType: string
 }) => (
   <div className={`${styles.pricingCard} ${styles[variant]}`}>
     <div className={styles.cardHeader}>
@@ -41,9 +44,12 @@ const PricingCard = ({
         </li>
       ))}
     </ul>
-    <button className={`${styles.ctaButton} ${styles[`${variant}Button`]}`}>
+    <a 
+      href={`/contact?service=${serviceType}`}
+      className={`${styles.ctaButton} ${styles[`${variant}Button`]}`}
+    >
       Commencer un projet
-    </button>
+    </a>
   </div>
 )
 
@@ -61,7 +67,8 @@ export default function Tarifs() {
         "Hébergement 1 an offert",
         "Formation utilisation basique"
       ],
-      variant: 'starter' as const
+      variant: 'starter' as const,
+      serviceType: 'site-vitrine'
     },
     {
       title: "Site Premium",
@@ -75,7 +82,8 @@ export default function Tarifs() {
         "Maintenance 6 mois",
         "Analytics et rapports mensuels"
       ],
-      variant: 'popular' as const
+      variant: 'popular' as const,
+      serviceType: 'site-sur-mesure'
     },
     {
       title: "Site E-commerce",
@@ -89,7 +97,8 @@ export default function Tarifs() {
         "Formation complète",
         "Support prioritaire 1 an"
       ],
-      variant: 'ecommerce' as const
+      variant: 'ecommerce' as const,
+      serviceType: 'site-ecommerce'
     },
     {
       title: "Sur Mesure",
@@ -103,7 +112,8 @@ export default function Tarifs() {
         "Support dédié",
         "Accompagnement privilégié"
       ],
-      variant: 'custom' as const
+      variant: 'custom' as const,
+      serviceType: 'autre'
     }
   ]
 
@@ -134,9 +144,26 @@ export default function Tarifs() {
             price={plan.price}
             features={plan.features}
             variant={plan.variant}
+            serviceType={plan.serviceType}
           />
         ))}
       </div>
+
+      <motion.div
+        className={styles.faqSection}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ 
+          duration: 0.5,
+          ease: "easeOut"
+        }}
+      >
+        <h2 className={styles.faqTitle}>Questions fréquentes</h2>
+        <p className={styles.faqSubtitle}>
+          Retrouvez les réponses aux questions les plus courantes sur mes services
+        </p>
+        <Accordion />
+      </motion.div>
     </motion.div>
   )
 }
