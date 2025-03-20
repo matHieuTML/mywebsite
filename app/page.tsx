@@ -134,8 +134,8 @@ export default function Home() {
             <h3>Intégration & fonctionnalités</h3>
             <p>C'est maintenant que le fun commence ! Et oui je vais donner vie à votre projet. avec tout mon coeur et mon savoir faire. </p>
             <motion.div
-              initial={{ bottom: -100 }}
-              whileInView={{ bottom: -18 }}
+              initial={{ right: -100, bottom: -160 }}
+              whileInView={{ right: 10, bottom: -18 }}
               transition={{ duration: 1, ease: "easeOut" }}
               className={styles.serviceImageWrapper}
             >
