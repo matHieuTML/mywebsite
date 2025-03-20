@@ -103,10 +103,21 @@ export default function Home() {
       <section className={styles.maquette}>
         <h2 className={styles.maquetteTitle}>Crééons ensemble le site qui vous correspond vraiment</h2>
         <Image src="/images/maquette.png" alt="Maquette" width={1000} height={1000} className={styles.maquetteImage} />
-        <div className={styles.snippetContainer}>
+        <motion.div 
+          className={styles.snippetContainer}
+          initial={{ y: 600 }}
+          style={{
+            y: useTransform(
+              useScroll().scrollY,
+              [0, 2000],
+              [600, -150],
+              { clamp: true }
+            )
+          }}
+        >
           <Image src="/images/snipet1.png" alt="Logo" width={350} height={600} className={styles.snippet1} priority />
           <Image src="/images/snipet2.png" alt="Logo" width={350} height={600} className={styles.snippet2} priority />
-        </div>
+        </motion.div>
         <section className={styles.snippetTextContainer}>
           <article><strong>Design.</strong>À partir de vos besoins et de vos inspiration identifions et design votre solution digitale</article>
           <article><strong>Création.</strong>Je réalise votre projet avec  les outils et technologies les performants et adaptés à vous.</article>

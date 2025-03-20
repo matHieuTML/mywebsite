@@ -98,7 +98,8 @@
   gap: 10rem;
   justify-content: space-evenly;
   margin-top: -600px;
-
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -107,10 +108,11 @@
   justify-content:space-evenly;
   align-items: end;
   gap: 2rem;
- height: 200px;
- margin-top: -150px;
+  height: 200px;
+  margin-top: -150px;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9), rgba(0,0,0,1));
-
+  position: relative;
+  z-index: 2;
 }
 
 .snippetTextContainer article {
