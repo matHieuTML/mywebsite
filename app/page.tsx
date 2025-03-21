@@ -1,12 +1,13 @@
 'use client'
 
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from 'next/link';
 import HeroScene from "./components/HeroScene";
 import ProjectsBanner from "./components/ProjectsBanner";
 import styles from "./page.module.css";
 import Image from "next/image";
+
 
 const maintenanceFiles = [
   { name: "Mise à jour de sécurité - v2.1", date: "14/03/2025" },
@@ -30,6 +31,7 @@ const maintenanceFiles = [
   { name: "Optimisation Core Web Vitals", date: "25/01/2025" },
   { name: "Rapport sécurité - Q1", date: "22/01/2025" },
 ];
+
 
 function ParallaxFiles() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -77,6 +79,18 @@ function ParallaxFiles() {
 }
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <main>
       <div className={styles.hero}>
@@ -115,12 +129,12 @@ export default function Home() {
         <Image src="/images/maquette.png" alt="Maquette" width={1000} height={1000} className={styles.maquetteImage} />
         <motion.div 
           className={styles.snippetContainer}
-          initial={{ y: 600 }}
+          initial={{ y: isMobile ? 0 : 600 }}
           style={{
             y: useTransform(
               useScroll().scrollY,
-              [0, 1500],/**2000 */
-              [200, -50],/**400, -150 */
+              [0, isMobile ? 1000 : 1500],
+              [isMobile ? 0 : 200, isMobile ? -200 : -50],
               { clamp: true }
             )
           }}
