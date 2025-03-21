@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from 'next/link';
 import HeroScene from "./components/HeroScene";
 import ProjectsBanner from "./components/ProjectsBanner";
 import styles from "./page.module.css";
@@ -81,19 +82,31 @@ export default function Home() {
       <div className={styles.hero}>
         <HeroScene />
         <div className={styles.content}>
-          <span>
-            <article className={styles.new}>
-              NEW
-            </article>
-            <article>
-              Voir les derniers projets
-            </article>
-          </span>
-          <h1>Créons ensemble Votre site web</h1>
-          <p>Design et création de site web moderne et performant</p>
+          <div className={styles.topLinks}>
+            <Link href="/actualites" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <article className={styles.new}>
+                NEW
+              </article>
+            </Link>
+            <Link href="/projets" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <article>
+                Voir les derniers projets
+              </article>
+            </Link>
+          </div>
+          <Link href="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <h1>Créons ensemble Votre site web</h1>
+          </Link>
+          <Link href="/services" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <p>Design et création de site web moderne et performant</p>
+          </Link>
           <div className={styles.buttonContainer}>
-            <button className={styles.button1}>Devis gratuit</button>
-            <button className={styles.button2}>Voir les tarifs</button>
+            <Link href="/contact" style={{ textDecoration: 'none' }}>
+              <button className={styles.button1}>Devis gratuit</button>
+            </Link>
+            <Link href="/tarifs" style={{ textDecoration: 'none' }}>
+              <button className={styles.button2}>Voir les tarifs</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -106,8 +119,8 @@ export default function Home() {
           style={{
             y: useTransform(
               useScroll().scrollY,
-              [0, 2000],
-              [400, -150],
+              [0, 1500],/**2000 */
+              [200, -50],/**400, -150 */
               { clamp: true }
             )
           }}

@@ -15,7 +15,7 @@
   justify-content: center;
 }
 
-.content span {
+.content span, .topLinks {
   display: flex;
   gap: 4px;
   align-items: center;
@@ -28,37 +28,17 @@
   border-radius: 20px;
   font-size: 12px;
 }
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .hero h1 {
-  font-weight: 900;
-  font-size: 72px;
-  margin-bottom: 1rem;
-  max-width: 800px;
-  text-align: center;
-  background: linear-gradient(90deg, 
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.75) 40%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 0.75) 60%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  line-height: 1.2;
-  animation: gradientMove 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+ font-weight: 900;
+ font-size: 72px;
+ margin-bottom: 1rem;
+ max-width: 800px;
+ text-align: center;
+ background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.7));
+ -webkit-background-clip: text;
+ background-clip: text;
+ color: transparent;
+ line-height: 1.2;
 }
 
 .hero p {
@@ -296,8 +276,8 @@ overflow: hidden;
 }
 
 .statContainer {
-  backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.75);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
@@ -406,8 +386,8 @@ overflow: hidden;
 
 .filesContainer {
   background: rgba( 74, 74, 74, 0.3 );
-  backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
+  backdrop-filter: blur( 4px );
   border-top-left-radius: 10px;
   border-bottom-right-radius: 20px;
 

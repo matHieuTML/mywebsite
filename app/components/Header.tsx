@@ -21,7 +21,7 @@ const Header = () => {
       <nav className={styles.nav}>
         <Link href="/" className={styles.logoContainer}>
           <Image
-            src="/images/logo.avif"
+            src="/images/logo-bgless.png"
             alt="Logo"
             width={48}
             height={48}
