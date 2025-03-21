@@ -139,8 +139,7 @@
     width: 100%;
   }
   .snippetContainer {
-    margin-top: 0px !important;
-  }
+    margin-top: 0 !important;  }
   .snippetContainer img {
     width: 30vw;
     height: auto;
@@ -302,6 +301,16 @@ min-width: 350px;
     height: 222px !important;
   }
 
+  .serviceItem1{
+    height: 350px !important;
+  }
+
+  .serviceImageWrapper{
+    width: 300px !important;
+    height: 150px !important;
+    bottom: -10px !important;
+    right: 10px !important;
+  }
 }
 
 .serviceItem2 {
@@ -347,8 +356,20 @@ overflow: hidden;
     width: 90%;
     height: 200px;
     margin: auto;
+    margin-top: 2rem;
 }
+@media (max-width: 1024px) {
+  .statContainer {
+    height: 500px !important;
+  }
+  .statContainerWithCircle {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 
+}
 .statContainer img {
     filter: brightness(0) invert(1);
 }

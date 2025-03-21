@@ -171,7 +171,7 @@ export default function Home() {
           </article>
           <article className={styles.serviceItem + ' ' + styles.serviceItem2}>
             <h3>Intégration & fonctionnalités</h3>
-            <p>C'est maintenant que le fun commence ! Et oui je vais donner vie à votre projet. avec tout mon coeur et mon savoir faire. </p>
+            <p>C&apos;est maintenant que le fun commence ! Et oui je vais donner vie à votre projet. avec tout mon coeur et mon savoir faire. </p>
             <motion.div
               initial={{ right: -100, bottom: -160 }}
               whileInView={{ right: 10, bottom: -18 }}
@@ -316,7 +316,7 @@ export default function Home() {
           </article>
           <article className={styles.serviceItem + ' ' + styles.serviceItem4}>
             <h3>Maintenance & gestion de votre site</h3>
-            <p>Je vous propose un service de maintenance et de gestion de votre site web. Je m'occupe de tout !!
+            <p>Je vous propose un service de maintenance et de gestion de votre site web. Je m&apos;occupe de tout !!
             </p>
             <ParallaxFiles />
           </article>
