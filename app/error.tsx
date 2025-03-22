@@ -18,7 +18,8 @@ export default function Error({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <h1 className={styles.title}>502</h1>
+      <h1 className={styles.title}>Une erreur est survenue</h1>
+      <p className={styles.message}>{error.message || 'Une erreur inattendue s\'est produite.'}</p>
       <h2 className={styles.subtitle}>Une erreur est survenue</h2>
       <p className={styles.description}>
         Le serveur a rencontré une erreur temporaire. Veuillez réessayer dans quelques instants.
