@@ -1,4 +1,4 @@
-const baseUrl = 'https://mathieugaucher.fr'
+const baseUrl = 'https://www.mathieu-gaucher.fr'
 
 export const defaultMetadata = {
   title: {
