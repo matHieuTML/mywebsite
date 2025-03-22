@@ -4,6 +4,22 @@ import { Suspense, useEffect, useState, useRef } from 'react'
 import { Object3D } from 'three'
 import styles from './HeroScene.module.css'
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+}
+
 function useMousePosition() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -25,6 +41,7 @@ function useMousePosition() {
 function Smartphone() {
   const { scene } = useGLTF('/models/smartphone.glb')
   const mousePosition = useMousePosition()
+  const isMobile = useIsMobile()
   const ref = useRef<Object3D>(null)
 
   const tiltAmount = 0.15
@@ -33,16 +50,17 @@ function Smartphone() {
 
   useFrame((state) => {
     if (!ref.current) return
+    const baseY = isMobile ? -1.4 : -0.2
     const floatOffset = -Math.sin(state.clock.elapsedTime * 1) * 0.08
-    ref.current.position.y = -0.2 + floatOffset
+    ref.current.position.y = baseY + floatOffset
   })
 
   return (
     <primitive 
       ref={ref}
       object={scene} 
-      scale={0.4}
-      position={[-4, -0.2, 1]}
+      scale={isMobile ? 0.3 : 0.4}
+      position={[isMobile ? -1.5 : -4, -0.2, 1]}
       rotation={[
         baseRotationX + mousePosition.y * tiltAmount,
         baseRotationY + mousePosition.x * tiltAmount,
@@ -55,6 +73,7 @@ function Smartphone() {
 function Laptop() {
   const { scene } = useGLTF('/models/windows_10_laptop.glb')
   const mousePosition = useMousePosition()
+  const isMobile = useIsMobile()
   const ref = useRef<Object3D>(null)
 
   const tiltAmount = 0.15
@@ -72,7 +91,7 @@ function Laptop() {
       ref={ref}
       object={scene} 
       scale={12}
-      position={[4, 0.5, 0]}
+      position={[isMobile ? 1.5 : 4, 0.5, 0]}
       rotation={[
         baseRotationX + mousePosition.y * tiltAmount,
         baseRotationY + mousePosition.x * tiltAmount,
