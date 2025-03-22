@@ -1,0 +1,16 @@
+{
+  "name": "Mathieu Gaucher - Développeur Web Freelance",
+  "short_name": "Mathieu Gaucher",
+  "description": "Développeur web freelance spécialisé dans la création de sites web modernes et performants",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

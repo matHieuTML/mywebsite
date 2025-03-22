@@ -1,3 +1,5 @@
+const baseUrl = 'https://mathieugaucher.fr'
+
 export const defaultMetadata = {
   title: {
     default: "Mathieu Gaucher - Développeur Web Freelance",
@@ -5,12 +7,19 @@ export const defaultMetadata = {
   },
   description: "Développeur web freelance spécialisé dans la création de sites web modernes et performants. Expert Next.js, React et WordPress.",
   keywords: ["développeur web", "freelance", "Next.js", "React", "WordPress", "création site web"],
-  authors: [{ name: "Mathieu Gaucher" }],
-  creator: "Mathieu Gaucher",
-  metadataBase: new URL("https://mathieugaucher.fr"),
-  openGraph: {
-    type: "website",
-    locale: "fr_FR",
-    siteName: "Mathieu Gaucher - Développeur Web Freelance"
+  metadataBase: new URL(baseUrl),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true
+    }
+  },
+  verification: {
+    google: 'A_REMPLACER_PAR_VOTRE_CODE_VERIFICATION',
+  },
+  alternates: {
+    canonical: baseUrl
   }
 }
