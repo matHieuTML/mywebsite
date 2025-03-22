@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react'
+import { useRef, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import emailjs from '@emailjs/browser'
 import styles from './page.module.css'
@@ -13,6 +13,14 @@ const serviceTypes = [
 ]
 
 export default function Contact() {
+  return (
+    <Suspense fallback={<div className={styles.loading}>Chargement...</div>}>
+      <ContactForm />
+    </Suspense>
+  )
+}
+
+function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [status, setStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null)
