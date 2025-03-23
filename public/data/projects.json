@@ -62,7 +62,7 @@
         { "icon": "⚡", "text": "Alpine.js" }
       ],
       "description": "Landing page primée mettant en lumière la désinformation",
-      "longDescription": "Création d'une landing page en Alpine.js dans le cadre d'un concours avec l'Arcom, visant à sensibiliser aux bulles informatives et aux dangers de la désinformation. Projet ayant reçu le coup de cœur du public.",
+      "longDescription": "Création d'une landing page en Alpine.js dans le cadre d'un concours avec l'Arcom, visant à sensibiliser aux bulles informatives et aux dangers de la désinformation.",
       "url": "https://infaux.onrender.com/"
     },
     {

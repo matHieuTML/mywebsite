@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import styles from './page.module.css'
 
 interface Project {
@@ -19,8 +19,24 @@ interface Project {
 import projectsData from '@/public/data/projects.json'
 const projects: Project[] = projectsData.projects
 
+const getRandomProject = (exclude?: number) => {
+  const availableProjects = exclude ? projects.filter(p => p.id !== exclude) : projects;
+  const randomIndex = Math.floor(Math.random() * availableProjects.length);
+  return availableProjects[randomIndex];
+};
+
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [featuredProject, setFeaturedProject] = useState(getRandomProject())
+
+  useEffect(() => {
+    // Change le projet toutes les minutes
+    const interval = setInterval(() => {
+      setFeaturedProject(prev => getRandomProject(prev.id));
+    }, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <motion.div 
@@ -31,6 +47,88 @@ export default function Projects() {
     >
       <div className={styles.header}>
         <h1 className={styles.title}>Mes Projets</h1>
+      </div>
+
+      {/* Projet vedette avec rotation */}
+      <div className={styles.featuredContainer}>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={featuredProject.id}
+            className={styles.featuredProject}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ 
+              duration: 0.5,
+              ease: "easeInOut"
+            }}
+          >
+            <div className={styles.featuredContent}>
+              <motion.h2 
+                className={styles.featuredTitle}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                {featuredProject.title}
+              </motion.h2>
+              <motion.div 
+                className={styles.tags}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                {featuredProject.tags.map((tag, index) => (
+                  <span key={index} className={styles.tag}>{tag.icon} {tag.text}</span>
+                ))}
+              </motion.div>
+              <motion.div 
+                className={styles.featuredDescription}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+              >
+                <p>{featuredProject.longDescription}</p>
+                {featuredProject.id === 5 && (
+                  <motion.div 
+                    className={styles.awardBadge}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    ⭐ Coup de cœur du public
+                  </motion.div>
+                )}
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                {featuredProject.url === 'coming_soon' ? (
+                  <span className={styles.comingSoon}>Bientôt disponible</span>
+                ) : (
+                  <a 
+                    href={featuredProject.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={styles.link}
+                  >
+                    Voir le projet →
+                  </a>
+                )}
+              </motion.div>
+            </div>
+            <div className={styles.featuredImage}>
+              <Image
+                src={'/images/placeholder.png'}
+                alt={featuredProject.title}
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       <motion.div 
@@ -96,13 +194,25 @@ export default function Projects() {
                 height={400}
                 className={styles.modalImage}
               />
-              <div className={styles.tags}>
+              <div className={styles.modalTagsContainer}>
                 {selectedProject.tags.map((tag, index) => (
-                  <span key={index} className={styles.tag}>
+                  <span key={index} className={styles.modalTag}>
                     {tag.icon} {tag.text}
                   </span>
                 ))}
               </div>
+              {selectedProject.id === 5 && (
+                <div className={styles.modalAwardContainer}>
+                  <motion.div 
+                    className={`${styles.awardBadge} ${styles.modalAwardBadge}`}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.3 }}
+                  >
+                    ⭐ Coup de cœur du public
+                  </motion.div>
+                </div>
+              )}
               <p className={styles.description}>
                 {selectedProject.longDescription}
               </p>

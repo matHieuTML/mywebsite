@@ -31,11 +31,129 @@
   transition: opacity 0.3s ease;
 }
 
+.featuredContainer {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.featuredProject {
+  background: rgba(23, 23, 23, 0.8);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.featuredContent {
+  flex: 1;
+}
+
+.featuredImage {
+  flex: 1;
+  position: relative;
+  min-height: 300px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.featuredTitle {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.awardBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.2));
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  color: rgba(255, 215, 0, 0.9);
+  margin-top: 1rem;
+  width: fit-content;
+  animation: shine 2s ease-in-out infinite;
+}
+
+.modalTagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.modalTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.modalAwardContainer {
+  margin: 0.5rem 0 1rem;
+}
+
+.modalAwardBadge {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+}
+
+@keyframes shine {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+.featuredDescription {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.comingSoon {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .featuredProject {
+    flex-direction: column;
+  }
+  
+  .featuredImage {
+    min-height: 200px;
+  }
+}
+
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   padding: 0.5rem;
+  justify-content: center;
+}
+
+.projectCard {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  margin: 0.5rem;
 }
 
 @media (max-width: 768px) {
