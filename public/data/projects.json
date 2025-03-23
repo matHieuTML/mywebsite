@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Refonte du site CIDJ",
-      "image": "placeholder",
+      "image": "/images/projets/cidj.avif",
       "tags": [
         { "icon": "🌐", "text": "Drupal" },
         { "icon": "📊", "text": "CRM" },
@@ -16,7 +16,7 @@
     {
       "id": 2,
       "title": "Maintenance de IJ Box",
-      "image": "placeholder",
+      "image": "/images/projets/ijbox.avif",
       "tags": [
         { "icon": "🔍", "text": "Veille" },
         { "icon": "🌐", "text": "Drupal" },
@@ -29,7 +29,7 @@
     {
       "id": 3,
       "title": "Jobs d'été - Aide à l'emploi des jeunes",
-      "image": "placeholder",
+      "image": "/images/projets/jobs.avif",
       "tags": [
         { "icon": "💼", "text": "WordPress" },
         { "icon": "🎨", "text": "Refonte UI" },
@@ -42,7 +42,7 @@
     {
       "id": 4,
       "title": "Reproduction de Windows 98 en Vue.js",
-      "image": "placeholder",
+      "image": "/images/projets/windows98.avif",
       "tags": [
         { "icon": "🖥️", "text": "Vue.js" },
         { "icon": "🎮", "text": "Expérience rétro" },
@@ -55,7 +55,7 @@
     {
       "id": 5,
       "title": "Infaux - Landing page anti-désinformation",
-      "image": "placeholder",
+      "image": "/images/projets/infaux.avif",
       "tags": [
         { "icon": "📰", "text": "Désinformation" },
         { "icon": "🏆", "text": "Concours Arcom" },
@@ -68,7 +68,7 @@
     {
       "id": 6,
       "title": "Portfolio en mode Terminal",
-      "image": "placeholder",
+      "image": "/images/projets/terminal.avif",
       "tags": [
         { "icon": "💻", "text": "JavaScript" },
         { "icon": "🎵", "text": "Animations & Sons" },
@@ -81,7 +81,7 @@
     {
       "id": 7,
       "title": "Ease Event - Plateforme de gestion d'événements",
-      "image": "placeholder",
+      "image": "/images/projets/ease.avif",
       "tags": [
         { "icon": "📅", "text": "Next.js" },
         { "icon": "📡", "text": "AWS" },

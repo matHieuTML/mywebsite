@@ -122,7 +122,7 @@ export default function Projects() {
             </div>
             <div className={styles.featuredImage}>
               <Image
-                src={'/images/placeholder.png'}
+                src={featuredProject.url === 'coming_soon' ? '/images/placeholder.png' : featuredProject.image}
                 alt={featuredProject.title}
                 fill
                 style={{ objectFit: 'cover' }}
