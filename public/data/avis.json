@@ -1,0 +1,39 @@
+{
+  "avis": [
+    {
+      "id": 1,
+      "nom": "Christian Biango",
+      "titre": "Camarade de promo et collègue de stage",
+      "content": "Lors de mes études en développement web chez Digital Campus Paris, j'ai eu l'occasion de rencontrer Mathieu. J'ai pu observer en lui une personne passionnée : il se donne toujours à fond dans tout ce qu'il entreprend, et il ne cesse de se dépasser. Je sens en lui une capacité à faire de grandes choses et je suis persuadé qu'il réussira à atteindre les objectifs qu'il s'est fixé. Selon moi, il sera un atout indispensable pour ceux qui l'auront dans son équipe.",
+      "image": "/images/personnes/christian.jpg"
+    },
+    {
+      "id": 2,
+      "nom": "Thomas Dubois",
+      "titre": "CTO de TechInnovate",
+      "content": "Collaborer avec Mathieu a été une expérience enrichissante. Sa capacité à transformer des concepts complexes en solutions élégantes et sa maîtrise des technologies modernes font de lui un développeur exceptionnel.",
+      "image": "/images/personnes/thomas.jpg"
+    },
+    {
+      "id": 3,
+      "nom": "Emma Rodriguez",
+      "titre": "Product Manager chez WebFlow",
+      "content": "J'ai eu le plaisir de travailler avec Mathieu sur plusieurs projets. Son expertise en React et sa compréhension approfondie des besoins utilisateurs ont grandement contribué au succès de nos produits.",
+      "image": "/images/personnes/emma.jpg"
+    },
+    {
+      "id": 4,
+      "nom": "Lucas Martin",
+      "titre": "Directeur Artistique Freelance",
+      "content": "Un véritable talent créatif doublé d'une expertise technique solide. Mathieu a su donner vie à mes designs avec une précision remarquable, tout en apportant des suggestions pertinentes pour améliorer l'expérience utilisateur.",
+      "image": "/images/personnes/lucas.jpg"
+    },
+    {
+      "id": 5,
+      "nom": "Julie Chen",
+      "titre": "Co-fondatrice de StartupVision",
+      "content": "Mathieu a joué un rôle clé dans le développement de notre MVP. Sa capacité à livrer un code propre et maintenable, combinée à son excellent sens de la communication, en fait un atout précieux pour n'importe quelle équipe.",
+      "image": "/images/personnes/julie.jpg"
+    }
+  ]
+}

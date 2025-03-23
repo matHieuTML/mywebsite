@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import styles from './page.module.css'
+import Testimonials from './Testimonials'
 
 interface Project {
   id: number
@@ -143,6 +144,7 @@ export default function Projects() {
             className={styles.projectCard}
             onClick={() => setSelectedProject(project)}
           >
+
             <div className={styles.imageContainer}>
               <Image
                 src={project.image === 'placeholder' ? '/images/placeholder.png' : project.image}
@@ -235,6 +237,7 @@ export default function Projects() {
           </motion.div>
         )}
       </div>
+      <Testimonials />
     </motion.div>
   )
 }
