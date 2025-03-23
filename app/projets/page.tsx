@@ -15,47 +15,9 @@ interface Project {
   url: string
 }
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Portfolio Créatif",
-    image: "/images/projets/site-13.jpeg",
-    tags: [
-      { icon: "⚛️", text: "React" },
-      { icon: "🎨", text: "Tailwind" },
-      { icon: "🚀", text: "Next.js" }
-    ],
-    description: "Site portfolio moderne et responsive",
-    longDescription: "Un site portfolio moderne conçu pour mettre en valeur les projets créatifs. Utilisant les dernières technologies web pour une expérience utilisateur fluide et engageante.",
-    url: "https://projet1.com"
-  },
-  {
-    id: 2,
-    title: "E-commerce Artisanal",
-    image: "/images/projets/site-7.jpeg",
-    tags: [
-      { icon: "🛍️", text: "E-commerce" },
-      { icon: "⚛️", text: "React" },
-      { icon: "💳", text: "Stripe" }
-    ],
-    description: "Plateforme de vente pour artisans",
-    longDescription: "Une plateforme e-commerce complète permettant aux artisans de vendre leurs créations. Intégration de paiements sécurisés et gestion des stocks en temps réel.",
-    url: "https://projet2.com"
-  },
-  {
-    id: 3,
-    title: "Application Web Progressive",
-    image: "/images/projets/site-4.jpeg",
-    tags: [
-      { icon: "📱", text: "PWA" },
-      { icon: "🅰️", text: "Angular" },
-      { icon: "🔥", text: "Firebase" }
-    ],
-    description: "Application web progressive performante",
-    longDescription: "Une application web progressive offrant une expérience native sur mobile et desktop. Synchronisation en temps réel et fonctionnalités hors ligne.",
-    url: "https://projet3.com"
-  }
-]
+// Importation des projets depuis le fichier JSON
+import projectsData from '@/public/data/projects.json'
+const projects: Project[] = projectsData.projects
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
@@ -85,7 +47,7 @@ export default function Projects() {
           >
             <div className={styles.imageContainer}>
               <Image
-                src={project.image}
+                src={project.image === 'placeholder' ? '/images/placeholder.png' : project.image}
                 alt={project.title}
                 fill
                 style={{ objectFit: 'cover' }}
@@ -128,7 +90,7 @@ export default function Projects() {
             </div>
             <div className={styles.modalContent}>
               <Image
-                src={selectedProject.image}
+                src={selectedProject.image === 'placeholder' ? '/images/placeholder.png' : selectedProject.image}
                 alt={selectedProject.title}
                 width={800}
                 height={400}
@@ -144,15 +106,21 @@ export default function Projects() {
               <p className={styles.description}>
                 {selectedProject.longDescription}
               </p>
-              <a 
-                href={selectedProject.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.ctaButton}
-              >
-                Voir le projet
-                <span>→</span>
-              </a>
+              {selectedProject.url === 'coming_soon' ? (
+                <div className={styles.comingSoon}>
+                  ✨ Bientôt disponible
+                </div>
+              ) : (
+                <a 
+                  href={selectedProject.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.ctaButton}
+                >
+                  Voir le projet
+                  <span>→</span>
+                </a>
+              )}
             </div>
           </motion.div>
         )}

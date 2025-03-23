@@ -1,0 +1,134 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Refonte du site CIDJ",
+      "image": "placeholder",
+      "tags": [
+        { "icon": "🌐", "text": "Drupal" },
+        { "icon": "📊", "text": "CRM" },
+        { "icon": "🛠️", "text": "Optimisation" }
+      ],
+      "description": "Refonte et optimisation du site CIDJ",
+      "longDescription": "Refonte complète du site CIDJ sous Drupal, optimisation des performances, mise en place de tests unitaires et formation des équipes à l'utilisation de la solution. Intégration d'un CRM et développement d'outils annexes pour l'analyse des données.",
+      "url": "https://www.cidj.com/"
+    },
+    {
+      "id": 2,
+      "title": "Maintenance de IJ Box",
+      "image": "placeholder",
+      "tags": [
+        { "icon": "🔍", "text": "Veille" },
+        { "icon": "🌐", "text": "Drupal" },
+        { "icon": "🔧", "text": "Maintenance" }
+      ],
+      "description": "Maintenance et amélioration de IJ Box",
+      "longDescription": "Entretien et mise à jour de la plateforme IJ Box sous Drupal. Amélioration continue et support technique pour cet outil de veille très utilisé par les enseignants.",
+      "url": "https://www.ijbox.fr/"
+    },
+    {
+      "id": 3,
+      "title": "Jobs d'été - Aide à l'emploi des jeunes",
+      "image": "placeholder",
+      "tags": [
+        { "icon": "💼", "text": "WordPress" },
+        { "icon": "🎨", "text": "Refonte UI" },
+        { "icon": "🔍", "text": "SEO" }
+      ],
+      "description": "Refonte et optimisation du site Jobs d'été",
+      "longDescription": "Refonte de la charte graphique et optimisation SEO de la plateforme Jobs d'été sous WordPress afin d'améliorer l'expérience utilisateur et la visibilité du site.",
+      "url": "https://www.jobs-ete.com/"
+    },
+    {
+      "id": 4,
+      "title": "Reproduction de Windows 98 en Vue.js",
+      "image": "placeholder",
+      "tags": [
+        { "icon": "🖥️", "text": "Vue.js" },
+        { "icon": "🎮", "text": "Expérience rétro" },
+        { "icon": "⚡", "text": "Applications interactives" }
+      ],
+      "description": "Une reproduction interactive de Windows 98 en Vue.js",
+      "longDescription": "Développement d'une version web de Windows 98 en Vue.js, intégrant certaines applications fonctionnelles pour une immersion rétro unique.",
+      "url": "https://windows98-lovat.vercel.app/"
+    },
+    {
+      "id": 5,
+      "title": "Infaux - Landing page anti-désinformation",
+      "image": "placeholder",
+      "tags": [
+        { "icon": "📰", "text": "Désinformation" },
+        { "icon": "🏆", "text": "Concours Arcom" },
+        { "icon": "⚡", "text": "Alpine.js" }
+      ],
+      "description": "Landing page primée mettant en lumière la désinformation",
+      "longDescription": "Création d'une landing page en Alpine.js dans le cadre d'un concours avec l'Arcom, visant à sensibiliser aux bulles informatives et aux dangers de la désinformation. Projet ayant reçu le coup de cœur du public.",
+      "url": "https://infaux.onrender.com/"
+    },
+    {
+      "id": 6,
+      "title": "Portfolio en mode Terminal",
+      "image": "placeholder",
+      "tags": [
+        { "icon": "💻", "text": "JavaScript" },
+        { "icon": "🎵", "text": "Animations & Sons" },
+        { "icon": "🔧", "text": "Expérience unique" }
+      ],
+      "description": "Un portfolio interactif en ligne de commande",
+      "longDescription": "Développement d'un portfolio en mode terminal avec JavaScript, intégrant des animations et des sons immersifs pour une navigation originale.",
+      "url": "https://mathieutml.github.io/terminal/"
+    },
+    {
+      "id": 7,
+      "title": "Ease Event - Plateforme de gestion d'événements",
+      "image": "placeholder",
+      "tags": [
+        { "icon": "📅", "text": "Next.js" },
+        { "icon": "📡", "text": "AWS" },
+        { "icon": "📲", "text": "QR Code" }
+      ],
+      "description": "Une plateforme moderne pour la gestion d'événements",
+      "longDescription": "Plateforme développée en Next.js avec MongoDB et AWS permettant de créer et gérer des événements avec génération de QR codes pour les inscriptions.",
+      "url": "https://fil-rouge-r4kt.onrender.com/"
+    },
+    {
+      "id": 8,
+      "title": "Newcase - E-commerce d'accessoires téléphoniques",
+      "image": "placeholder",
+      "tags": [
+        { "icon": "🛍️", "text": "Next.js" },
+        { "icon": "💳", "text": "Stripe" },
+        { "icon": "🚚", "text": "Mondial Relay" }
+      ],
+      "description": "Plateforme e-commerce optimisée pour la vente d’accessoires",
+      "longDescription": "Développement d'un site e-commerce en Next.js avec MongoDB, AWS et Stripe. Intégration de Mondial Relay pour la création d'étiquettes de transport et d'un back-office dédié à la gestion des commandes et livraisons.",
+      "url": "coming_soon"
+    },
+    {
+      "id": 9,
+      "title": "Talk and Play - Traduction en temps réel du chat",
+      "image": "placeholder",
+      "tags": [
+        { "icon": "🎮", "text": "Gaming" },
+        { "icon": "📖", "text": "OCR" },
+        { "icon": "🔄", "text": "Traduction" }
+      ],
+      "description": "Un outil innovant de traduction pour les jeux vidéo",
+      "longDescription": "Micro logiciel Python utilisant Tesseract OCR pour capturer et traduire en temps réel les discussions dans les jeux vidéo ou streams, avec affichage en overlay.",
+      "url": "coming_soon"
+    },
+    {
+      "id": 10,
+      "title": "Matomo Tools - Outils avancés pour Matomo",
+      "image": "placeholder",
+      "tags": [
+        { "icon": "📊", "text": "Django" },
+        { "icon": "🤖", "text": "IA" },
+        { "icon": "🔍", "text": "Analytics" }
+      ],
+      "description": "Une plateforme pour interagir avec Matomo Analytics",
+      "longDescription": "Développement d'une plateforme en Django proposant divers outils pour Matomo, tels qu'un agent IA, une recherche simplifiée et une gestion avancée des logs.",
+      "url": "coming_soon"
+    }
+  ]
+}
