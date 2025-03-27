@@ -120,7 +120,7 @@
     {
       "id": 10,
       "title": "Matomo Tools - Outils avancés pour Matomo",
-      "image": "placeholder",
+      "image": "/images/projets/matomo.png",
       "tags": [
         { "icon": "📊", "text": "Django" },
         { "icon": "🤖", "text": "IA" },
