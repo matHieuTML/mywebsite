@@ -97,23 +97,15 @@ export default function Home() {
         <HeroScene />
         <div className={styles.content}>
           <div className={styles.topLinks}>
-            <Link href="/actualites" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <article className={styles.new}>
-                NEW
-              </article>
-            </Link>
             <Link href="/projets" style={{ textDecoration: 'none', color: 'inherit' }}>
               <article>
-                Voir les derniers projets
+                <span className={styles.new}>NEW</span>
+                <span>Voir les derniers projets</span>
               </article>
             </Link>
           </div>
-          <Link href="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <h1>Créons ensemble Votre site web</h1>
-          </Link>
-          <Link href="/services" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <p>Design et création de site web moderne et performant</p>
-          </Link>
+          <h1>Créons ensemble Votre site web</h1>
+          <p>Design et création de site web moderne et performant</p>
           <div className={styles.buttonContainer}>
             <Link href="/contact" style={{ textDecoration: 'none' }}>
               <button className={styles.button1}>Devis gratuit</button>

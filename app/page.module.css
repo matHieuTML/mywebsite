@@ -22,11 +22,20 @@
   text-align: start;
   width: 680px;
 }
-.new{
+.topLinks article {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.new {
   border: 1px solid #ffffff;
   padding: 4px 8px;
   border-radius: 20px;
   font-size: 12px;
+  display: inline-block;
+  white-space: nowrap;
+  width: fit-content !important;
+  min-width: 0 !important;
 }
 .hero h1 {
  font-weight: 900;
