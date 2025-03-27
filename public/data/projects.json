@@ -128,7 +128,7 @@
       ],
       "description": "Une plateforme pour interagir avec Matomo Analytics",
       "longDescription": "Développement d'une plateforme en Django proposant divers outils pour Matomo, tels qu'un agent IA, une recherche simplifiée et une gestion avancée des logs.",
-      "url": "coming_soon"
+      "url": "https://matomo-tools-production.up.railway.app/ls"
     }
   ]
 }
