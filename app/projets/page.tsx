@@ -20,6 +20,10 @@ interface Project {
 import projectsData from '@/public/data/projects.json'
 const projects: Project[] = projectsData.projects
 
+const getProjectById = (id: number) => {
+  return projects.find(p => p.id === id) || null;
+};
+
 const getRandomProject = (exclude?: number) => {
   const availableProjects = exclude ? projects.filter(p => p.id !== exclude) : projects;
   const randomIndex = Math.floor(Math.random() * availableProjects.length);
@@ -28,7 +32,24 @@ const getRandomProject = (exclude?: number) => {
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-  const [featuredProject, setFeaturedProject] = useState(getRandomProject())
+  const [featuredProject, setFeaturedProject] = useState<Project>(getRandomProject())
+
+  useEffect(() => {
+    // Récupérer l'ID depuis l'URL
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('id');
+    
+    if (projectId) {
+      const project = getProjectById(parseInt(projectId));
+      if (project) {
+        setFeaturedProject(project);
+      } else {
+        setFeaturedProject(getRandomProject());
+      }
+    } else {
+      setFeaturedProject(getRandomProject());
+    }
+  }, [])
 
   useEffect(() => {
     // Change le projet toutes les minutes

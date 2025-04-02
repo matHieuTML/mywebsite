@@ -4,6 +4,42 @@
   flex-direction: column;
   align-items: center;
   padding: 4rem 2rem;
+  position: relative;
+}
+
+.blur {
+  position: absolute;
+  z-index: -1;
+  filter: blur(100px);
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  opacity: 0.15;
+  transition: all 0.4s ease;
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff);
+}
+
+/* Styles pour les différents types de services */
+.blur-starter {
+  background: linear-gradient(180deg, rgba(66, 153, 225, 0), rgba(66, 153, 225, 0.5));
+  opacity: 0.5;
+}
+
+.blur-popular {
+  background: linear-gradient(180deg, rgba(0, 255, 157, 0), rgba(0, 255, 157, 0.5));
+  opacity: 0.5;
+}
+
+.blur-ecommerce {
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0), rgba(236, 72, 153, 0.5));
+  opacity: 0.5;
+}
+
+.blur-custom {
+  background: linear-gradient(180deg, rgba(167, 139, 250, 0), rgba(167, 139, 250, 0.5));
+  opacity: 0.5;
 }
 
 .title {
@@ -33,6 +69,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
 }
 
 .inputGroup {
@@ -66,6 +103,31 @@
   border-color: #0099FF;
 }
 
+/* Focus styles pour les différents types de services */
+.starter .input:focus,
+.starter .select:focus,
+.starter .textarea:focus {
+  border-color: #4299e1;
+}
+
+.popular .input:focus,
+.popular .select:focus,
+.popular .textarea:focus {
+  border-color: #00ff9d;
+}
+
+.ecommerce .input:focus,
+.ecommerce .select:focus,
+.ecommerce .textarea:focus {
+  border-color: #ec4899;
+}
+
+.custom .input:focus,
+.custom .select:focus,
+.custom .textarea:focus {
+  border-color: #a78bfa;
+}
+
 .textarea {
   min-height: 150px;
   resize: vertical;
@@ -74,18 +136,58 @@
 .button {
   padding: 1rem 2rem;
   border-radius: 12px;
-  border: 1px solid rgba(0, 153, 255, 0.3);
-  background: linear-gradient(135deg, #0099FF 0%, #0077CC 100%);
-  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  color: #000;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   margin-top: 1rem;
 }
 
+.button-starter {
+  background: rgba(66, 153, 225, 0.1);
+  border-color: rgba(66, 153, 225, 0.3);
+  color: #4299e1;
+}
+
+.button-popular {
+  background: rgba(0, 255, 157, 0.1);
+  border-color: rgba(0, 255, 157, 0.3);
+  color: #00ff9d;
+}
+
+.button-ecommerce {
+  background: rgba(236, 72, 153, 0.1);
+  border-color: rgba(236, 72, 153, 0.3);
+  color: #ec4899;
+}
+
+.button-custom {
+  background: rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.3);
+  color: #a78bfa;
+}
+
 .button:hover {
-  border-color: rgba(0, 153, 255, 0.5);
+  opacity: 0.9;
+}
+
+.button-starter:hover {
+  background: rgba(66, 153, 225, 0.2);
+}
+
+.button-popular:hover {
+  background: rgba(0, 255, 157, 0.2);
+}
+
+.button-ecommerce:hover {
+  background: rgba(236, 72, 153, 0.2);
+}
+
+.button-custom:hover {
+  background: rgba(167, 139, 250, 0.2);
 }
 
 .button:disabled {

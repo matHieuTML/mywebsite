@@ -6,10 +6,10 @@ import emailjs from '@emailjs/browser'
 import styles from './page.module.css'
 
 const serviceTypes = [
-  { value: 'site-vitrine', label: 'Site Vitrine' },
-  { value: 'site-ecommerce', label: 'Site E-commerce' },
-  { value: 'site-sur-mesure', label: 'Site Sur Mesure' },
-  { value: 'autre', label: 'Autre' }
+  { value: 'starter', label: 'Site Vitrine' },
+  { value: 'popular', label: 'Site Premium' },
+  { value: 'ecommerce', label: 'Site E-commerce' },
+  { value: 'custom', label: 'Projet Sur Mesure' }
 ]
 
 export default function Contact() {
@@ -25,7 +25,8 @@ function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [status, setStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null)
   const searchParams = useSearchParams()
-  const selectedService = searchParams.get('service')
+  const initialService = searchParams.get('service')
+  const [selectedService, setSelectedService] = useState(initialService || '')
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -81,7 +82,8 @@ function ContactForm() {
         Discutons de votre projet et voyons comment je peux vous aider à le réaliser.
       </p>
 
-      <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
+      <form ref={formRef} onSubmit={handleSubmit} className={`${styles.form} ${selectedService ? styles[selectedService] : ''}`}>
+        <div className={`${styles.blur} ${selectedService ? styles[`blur-${selectedService}`] : ''}`} />
         <div className={styles.inputGroup}>
           <label htmlFor="name" className={styles.label}>Nom</label>
           <input
@@ -113,7 +115,8 @@ function ContactForm() {
             name="service"
             required
             className={styles.select}
-            defaultValue={selectedService || ''}
+            value={selectedService}
+            onChange={(e) => setSelectedService(e.target.value)}
           >
             <option value="" disabled>Sélectionnez un type de projet</option>
             {serviceTypes.map((type) => (
@@ -137,7 +140,7 @@ function ContactForm() {
 
         <button
           type="submit"
-          className={styles.button}
+          className={`${styles.button} ${selectedService ? styles[`button-${selectedService}`] : ''}`}
           disabled={isSubmitting}
         >
           Envoyer

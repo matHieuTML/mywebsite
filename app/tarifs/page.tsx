@@ -68,7 +68,7 @@ export default function Tarifs() {
         "Formation utilisation basique"
       ],
       variant: 'starter' as const,
-      serviceType: 'site-vitrine'
+      serviceType: 'starter'
     },
     {
       title: "Site Premium",
@@ -83,7 +83,7 @@ export default function Tarifs() {
         "Analytics et rapports mensuels"
       ],
       variant: 'popular' as const,
-      serviceType: 'site-sur-mesure'
+      serviceType: 'popular'
     },
     {
       title: "Site E-commerce",
@@ -98,7 +98,7 @@ export default function Tarifs() {
         "Support prioritaire 1 an"
       ],
       variant: 'ecommerce' as const,
-      serviceType: 'site-ecommerce'
+      serviceType: 'ecommerce'
     },
     {
       title: "Sur Mesure",
@@ -113,7 +113,7 @@ export default function Tarifs() {
         "Accompagnement privilégié"
       ],
       variant: 'custom' as const,
-      serviceType: 'autre'
+      serviceType: 'custom'
     }
   ]
 

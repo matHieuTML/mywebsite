@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { useTime } from 'framer-motion';
 import InfiniteBanner from './InfiniteBanner';
 import Image from 'next/image';
@@ -23,7 +24,11 @@ const ProjectsBanner = () => {
           <InfiniteBanner clock={time} loopDuration={30000}>
             <div className={styles.projectsRow}>
               {projects1.map((project) => (
-                <div key={project.id} className={styles.projectCard}>
+                <Link 
+                  key={project.id} 
+                  href={`/projets?id=${project.id}`} 
+                  className={styles.projectCard}
+                >
                   <div className={styles.imageContainer}>
                     <Image
                       src={project.url === 'coming_soon' ? '/images/placeholder.png' : project.image}
@@ -34,7 +39,7 @@ const ProjectsBanner = () => {
                     />
                   </div>
                   <h3>{project.title}</h3>
-                </div>
+                </Link>
               ))}
             </div>
           </InfiniteBanner>
@@ -44,7 +49,11 @@ const ProjectsBanner = () => {
           <InfiniteBanner clock={time} loopDuration={30000}>
             <div className={styles.projectsRow}>
               {projects2.map((project) => (
-                <div key={project.id} className={styles.projectCard}>
+                <Link 
+                  key={project.id} 
+                  href={`/projets?id=${project.id}`} 
+                  className={styles.projectCard}
+                >
                   <div className={styles.imageContainer}>
                     <Image
                       src={project.url === 'coming_soon' ? '/images/placeholder.png' : project.image}
@@ -55,7 +64,7 @@ const ProjectsBanner = () => {
                     />
                   </div>
                   <h3>{project.title}</h3>
-                </div>
+                </Link>
               ))}
             </div>
           </InfiniteBanner>
