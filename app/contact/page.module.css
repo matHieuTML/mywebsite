@@ -105,7 +105,7 @@
 .select:focus,
 .textarea:focus {
   outline: none;
-  border-color: #0099FF;
+  border-color: #ffffff;
 }
 
 /* Focus styles pour les différents types de services */
