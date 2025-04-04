@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": 1,
-      "title": "Refonte du site CIDJ",
+      "title": "CIDJ",
       "image": "/images/projets/cidj.avif",
       "tags": [
         { "icon": "🌐", "text": "Drupal" },
@@ -15,7 +15,7 @@
     },
     {
       "id": 2,
-      "title": "Maintenance de IJ Box",
+      "title": "IJ Box",
       "image": "/images/projets/ijbox.avif",
       "tags": [
         { "icon": "🔍", "text": "Veille" },
@@ -28,7 +28,7 @@
     },
     {
       "id": 3,
-      "title": "Jobs d'été - Aide à l'emploi des jeunes",
+      "title": "Jobs d'été",
       "image": "/images/projets/jobs.avif",
       "tags": [
         { "icon": "💼", "text": "WordPress" },
@@ -41,7 +41,7 @@
     },
     {
       "id": 4,
-      "title": "Reproduction de Windows 98 en Vue.js",
+      "title": "Windows 98",
       "image": "/images/projets/windows98.avif",
       "tags": [
         { "icon": "🖥️", "text": "Vue.js" },
@@ -54,7 +54,7 @@
     },
     {
       "id": 5,
-      "title": "Infaux - Landing page anti-désinformation",
+      "title": "Infaux",
       "image": "/images/projets/infaux.avif",
       "tags": [
         { "icon": "📰", "text": "Désinformation" },
@@ -67,7 +67,7 @@
     },
     {
       "id": 6,
-      "title": "Portfolio en mode Terminal",
+      "title": "Terminal",
       "image": "/images/projets/terminal.avif",
       "tags": [
         { "icon": "💻", "text": "JavaScript" },
@@ -80,7 +80,7 @@
     },
     {
       "id": 7,
-      "title": "Ease Event - Plateforme de gestion d'événements",
+      "title": "Ease Event",
       "image": "/images/projets/ease.avif",
       "tags": [
         { "icon": "📅", "text": "Next.js" },
@@ -93,7 +93,7 @@
     },
     {
       "id": 8,
-      "title": "Newcase - E-commerce d'accessoires téléphoniques",
+      "title": "Newcase",
       "image": "placeholder",
       "tags": [
         { "icon": "🛍️", "text": "Next.js" },
@@ -106,7 +106,7 @@
     },
     {
       "id": 9,
-      "title": "Talk and Play - Traduction en temps réel du chat",
+      "title": "Talk and Play",
       "image": "placeholder",
       "tags": [
         { "icon": "🎮", "text": "Gaming" },
@@ -119,7 +119,7 @@
     },
     {
       "id": 10,
-      "title": "Matomo Tools - Outils avancés pour Matomo",
+      "title": "Matomo Tools",
       "image": "/images/projets/matomo.png",
       "tags": [
         { "icon": "📊", "text": "Django" },

@@ -42,6 +42,11 @@
   opacity: 0.5;
 }
 
+.blur-other {
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff);
+  opacity: 0.15;
+}
+
 .title {
   font-size: 2.5rem;
   font-weight: 900;
@@ -126,6 +131,12 @@
 .custom .select:focus,
 .custom .textarea:focus {
   border-color: #a78bfa;
+}
+
+.other .input:focus,
+.other .select:focus,
+.other .textarea:focus {
+  border-color: #ffffff;
 }
 
 .textarea {

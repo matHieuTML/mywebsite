@@ -9,7 +9,8 @@ const serviceTypes = [
   { value: 'starter', label: 'Site Vitrine' },
   { value: 'popular', label: 'Site Premium' },
   { value: 'ecommerce', label: 'Site E-commerce' },
-  { value: 'custom', label: 'Projet Sur Mesure' }
+  { value: 'custom', label: 'Projet Sur Mesure' },
+  { value: 'other', label: 'Autre' }
 ]
 
 export default function Contact() {
