@@ -117,7 +117,7 @@ export default function Home() {
         </div>
       </div>
       <section className={styles.maquette}>
-        <h2 className={styles.maquetteTitle}>Crééons ensemble le site qui vous correspond vraiment</h2>
+        <h2 className={styles.maquetteTitle}>Créons ensemble le site qui vous correspond vraiment</h2>
         <Image src="/images/maquette.png" alt="Maquette" width={1000} height={1000} className={styles.maquetteImage} />
         <motion.div 
           className={styles.snippetContainer}
@@ -143,7 +143,7 @@ export default function Home() {
 
       <section className={styles.serviceContainer}>
         <p className={styles.serviceOnTitle}>Services</p>
-        <h2 className={styles.serviceTitle}>Tous les services dont vous avez besoin au meme endroit</h2>
+        <h2 className={styles.serviceTitle}>Tous les services dont vous avez besoin au même endroit</h2>
         <p className={styles.serviceText}>À l’aide des outils les plus performants Développons ensemble votre projet.</p>
 
 

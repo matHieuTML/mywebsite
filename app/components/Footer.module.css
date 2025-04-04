@@ -58,3 +58,13 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 400px) {
+  .socialLinks {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .socialLink {
+    width: 200px;
+  }
+}

@@ -142,18 +142,16 @@
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
   gap: 2rem;
   padding: 0.5rem;
   justify-content: center;
 }
 
 .projectCard {
-  flex: 1;
-  min-width: 300px;
-  max-width: 450px;
-  margin: 0.5rem;
+  width: 100%;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
