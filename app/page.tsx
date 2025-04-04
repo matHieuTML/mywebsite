@@ -225,7 +225,7 @@ export default function Home() {
                         strokeLinecap="round"
                         initial={{ pathLength: 0 }}
                         whileInView={{ pathLength: 0.98 }}
-                        viewport={{ once: false }}
+                        viewport={{ once: false, amount: 0.3, margin: "-100px" }}
                         transition={{ duration: 2, ease: "easeInOut" }}
                       />
                     </svg>
@@ -233,7 +233,7 @@ export default function Home() {
                       className={styles.circleValue}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: false, amount: 0.3, margin: "-100px" }}
                       transition={{ duration: 0.5, delay: 1.5 }}
                     >
                       98
@@ -263,7 +263,7 @@ export default function Home() {
                         strokeLinecap="round"
                         initial={{ pathLength: 0 }}
                         whileInView={{ pathLength: 1 }}
-                        viewport={{ once: false }}
+                        viewport={{ once: false, amount: 0.3, margin: "-100px" }}
                         transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }}
                       />
                     </svg>
@@ -271,7 +271,7 @@ export default function Home() {
                       className={styles.circleValue}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: false, amount: 0.3, margin: "-100px" }}
                       transition={{ duration: 0.5, delay: 1.7 }}
                     >
                       100
@@ -301,7 +301,7 @@ export default function Home() {
                         strokeLinecap="round"
                         initial={{ pathLength: 0 }}
                         whileInView={{ pathLength: 0.97 }}
-                        viewport={{ once: false }}
+                        viewport={{ once: false, amount: 0.3, margin: "-100px" }}
                         transition={{ duration: 2, ease: "easeInOut", delay: 0.4 }}
                       />
                     </svg>
@@ -309,7 +309,7 @@ export default function Home() {
                       className={styles.circleValue}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: false, amount: 0.3, margin: "-100px" }}
                       transition={{ duration: 0.5, delay: 1.9 }}
                     >
                       97
