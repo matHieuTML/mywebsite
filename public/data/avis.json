@@ -4,8 +4,15 @@
       "id": 1,
       "nom": "Christian Biango",
       "titre": "Camarade de promo et collègue de stage",
-      "content": "Lors de mes études en développement web chez Digital Campus Paris, j'ai eu l'occasion de rencontrer Mathieu. J'ai pu observer en lui une personne passionnée : il se donne toujours à fond dans tout ce qu'il entreprend, et il ne cesse de se dépasser. Je sens en lui une capacité à faire de grandes choses et je suis persuadé qu'il réussira à atteindre les objectifs qu'il s'est fixé. Selon moi, il sera un atout indispensable pour ceux qui l'auront dans son équipe.",
+      "content": "Lors de mes études en développement web chez Digital Campus Paris, j'ai rencontré Mathieu. J'ai tout de suite vu en lui une personne passionnée : il se donne toujours à fond dans ce qu'il entreprend [...] Je suis persuadé qu’il atteindra ses objectifs. Il sera un atout pour toute équipe qui l’accueillera.",
       "image": "/images/personnes/christian.jpg"
+    },
+    {
+      "id": 2,
+      "nom": "Nathaniel Josse",
+      "titre": "Alternant chez Joltee et étudiant à Digital Campus",
+      "content": "Mathieu a été une rencontre exceptionnelle. Il est très travailleur, volontaire, et motivé. Sa présence dans une équipe est un plus non négligeable et je le recommande vivement !",
+      "image": "/images/personnes/nathaniel.jpg"
     }
   ]
 }
