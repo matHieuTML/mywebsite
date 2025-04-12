@@ -13,6 +13,13 @@
       "titre": "Alternant chez Joltee et étudiant à Digital Campus",
       "content": "Mathieu a été une rencontre exceptionnelle. Il est très travailleur, volontaire, et motivé. Sa présence dans une équipe est un plus non négligeable et je le recommande vivement !",
       "image": "/images/personnes/nathaniel.jpg"
+    },
+    {
+      "id": 3,
+      "nom": "Florent L'HELIAS",
+      "titre": "Développeur web freelance, Référent",
+      "content": "J’ai le plaisir d’accompagner Mathieu depuis quelques années. Il se distingue par son sérieux, son engagement et sa capacité à toujours donner le meilleur de lui-même. C’est un bosseur acharné, doté d’une vraie rigueur professionnelle [...] Il sait fédérer autour de lui, motiver ses équipes et mener à bien ses projets avec une implication remarquable. Mathieu possède cette rare combinaison entre compétences techniques solides, vision stratégique [...] et qualités humaines fortes.",
+      "image": "/images/personnes/florent.jpg"
     }
   ]
 }
