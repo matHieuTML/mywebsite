@@ -20,6 +20,20 @@
       "titre": "Développeur web freelance, Référent",
       "content": "J’ai le plaisir d’accompagner Mathieu depuis quelques années. Il se distingue par son sérieux, son engagement et sa capacité à toujours donner le meilleur de lui-même. C’est un bosseur acharné, doté d’une vraie rigueur professionnelle [...] Il sait fédérer autour de lui, motiver ses équipes et mener à bien ses projets avec une implication remarquable. Mathieu possède cette rare combinaison entre compétences techniques solides, vision stratégique [...] et qualités humaines fortes.",
       "image": "/images/personnes/florent.jpg"
+    },
+    {
+      "id": 4,
+      "nom": "Mathis Depuiset",
+      "titre": "Chef de Projet Digital @ CIDJ",
+      "content": "J’ai eu le plaisir d’accompagner Mathieu en tant qu’alternant développeur web. Sérieux, curieux et autonome, il a rapidement su s’adapter et apporter de vraies solutions aux projets confiés. Sa rigueur et sa capacité d’apprentissage en font un atout précieux pour toute équipe technique.",
+      "image": "/images/personnes/mathis.jpg"
+    },
+    {
+      "id": 5,
+      "nom": "Ines PEÑARANDA",
+      "titre": "Chargée de Communication @ CIDJ",
+      "content": "Mathieu est très investi dans ses projets, réfléchi et force de proposition. C'est un réel plaisir de travailler avec lui au quotidien. Je ne peux que le recommander pour vos équipes !",
+      "image": "/images/personnes/ines.jpg"
     }
   ]
 }
